@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JaeMyeongSon/Azure_File_Upload#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "multer": "^1.4.4"
   }
 }
