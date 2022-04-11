@@ -2,9 +2,7 @@ var express = require('express')
 const app = express()
 const port = 6000
 const multer = require('multer')
-const multerAzure = require('multer-azure') 
- 
-console.log(date)
+const multerAzure = require('multer-azure')  
 
 var upload = multer({ 
   storage: multerAzure({
@@ -13,8 +11,7 @@ var upload = multer({
     key: '[key]', //스토리지 계정 창의 액세스 키 아래에 나열된 키
     container: '[container]',  //임의의 컨테이너 이름, 존재하지 않는 경우 생성됩니다.
 
-     blobPathResolver: function(req, file, callback){
-        console.log(' TEST ' + JSON.stringify(file.originalname))
+     blobPathResolver: function(req, file, callback){ 
             var blobPath = file.originalname 
         callback(null, blobPath);
      }
