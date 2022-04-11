@@ -7,6 +7,8 @@ const moment = require('moment');
 require('moment-timezone');
 moment.tz.setDefault("Asia/Seoul");
 
+var date = moment().format('YYYY-MM-DD HH:mm:ss'); 
+
 var upload = multer({ 
   storage: multerAzure({
     connectionString: '[connectionString]', //Azure 저장소 계정에 대한 연결 문자열입니다. 지정한 경우 이 문자열이 선호되며 그렇지 않은 경우 계정 및 키로 대체됩니다.
