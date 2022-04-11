@@ -3,6 +3,9 @@ const app = express()
 const port = 6000
 const multer = require('multer')
 const multerAzure = require('multer-azure')  
+const moment = require('moment');
+require('moment-timezone');
+moment.tz.setDefault("Asia/Seoul");
 
 var upload = multer({ 
   storage: multerAzure({
