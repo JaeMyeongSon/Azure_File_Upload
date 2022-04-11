@@ -16,7 +16,7 @@ var upload = multer({
     key: '[key]', //스토리지 계정 창의 액세스 키 아래에 나열된 키
     container: '[container]',  //임의의 컨테이너 이름, 존재하지 않는 경우 생성됩니다.
      blobPathResolver: function(req, file, callback){ 
-            let blobPath = file.originalname 
+            let blobPath = date + file.originalname;
         callback(null, blobPath);
      }
   })
